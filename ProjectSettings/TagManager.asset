@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ball
   - Button
+  - Plane
+  - Root
   layers:
   - Default
   - TransparentFX

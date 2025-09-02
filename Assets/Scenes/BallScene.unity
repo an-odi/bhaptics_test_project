@@ -579,6 +579,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135872935}
   m_CullTransparentMesh: 1
+--- !u!1 &142635178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142635179}
+  m_Layer: 0
+  m_Name: Planes
+  m_TagString: Root
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &142635179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142635178}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.07956, y: 3.0389936, z: -34.74034}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 146574480}
+  - {fileID: 881912318}
+  - {fileID: 1208920549}
+  - {fileID: 656852680}
+  - {fileID: 155446799}
+  - {fileID: 238067155}
+  - {fileID: 1997845167}
+  - {fileID: 1934015964}
+  - {fileID: 943633245}
+  - {fileID: 1188210932}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &144498019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -675,7 +716,7 @@ GameObject:
   - component: {fileID: 146574477}
   m_Layer: 0
   m_Name: FrontPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -763,8 +804,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146574476}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -28.07956, y: -3.0389936, z: 34.74034}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -784,7 +825,7 @@ Transform:
   - {fileID: 1487411170}
   - {fileID: 1150809833}
   - {fileID: 1935568901}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &155446795
 GameObject:
@@ -800,7 +841,7 @@ GameObject:
   - component: {fileID: 155446796}
   m_Layer: 0
   m_Name: PathPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,13 +929,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155446795}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39, y: 0, z: -5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.920441, y: -3.0389936, z: 29.740341}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1159851747}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &238067151
 GameObject:
@@ -910,7 +951,7 @@ GameObject:
   - component: {fileID: 238067152}
   m_Layer: 0
   m_Name: ParamPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -998,13 +1039,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238067151}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39, y: 0.10645285, z: -20}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.920441, y: -2.9325407, z: 14.740341}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1641642604}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &314842445
 PrefabInstance:
@@ -2473,7 +2514,7 @@ GameObject:
   - component: {fileID: 656852677}
   m_Layer: 0
   m_Name: LoopPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2561,14 +2602,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656852676}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: -20}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.079559, y: -3.0389936, z: 14.740341}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 518955544}
   - {fileID: 335904700}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &662742377
 PrefabInstance:
@@ -3179,7 +3220,7 @@ GameObject:
   - component: {fileID: 881912315}
   m_Layer: 0
   m_Name: BackPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3267,8 +3308,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881912314}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0795593, y: -3.0389936, z: 34.74034}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3288,7 +3329,7 @@ Transform:
   - {fileID: 1542178114}
   - {fileID: 1060987867}
   - {fileID: 383688580}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &920929310
 PrefabInstance:
@@ -3377,7 +3418,7 @@ GameObject:
   - component: {fileID: 943633242}
   m_Layer: 0
   m_Name: LeftHandWaveformPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3465,8 +3506,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943633241}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45, y: 0, z: -40}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.92044, y: -3.0389936, z: -5.259659}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3476,7 +3517,7 @@ Transform:
   - {fileID: 127540700}
   - {fileID: 2005049575}
   - {fileID: 945091886}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &945091885
 PrefabInstance:
@@ -4701,7 +4742,7 @@ GameObject:
   - component: {fileID: 1188210929}
   m_Layer: 0
   m_Name: RightHandWaveformPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4789,8 +4830,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188210928}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67, y: 0, z: -40}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 38.92044, y: -3.0389936, z: -5.259659}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4800,7 +4841,7 @@ Transform:
   - {fileID: 691138801}
   - {fileID: 815472846}
   - {fileID: 1206579694}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1203255435 stripped
 Transform:
@@ -4903,7 +4944,7 @@ GameObject:
   - component: {fileID: 1208920546}
   m_Layer: 0
   m_Name: EventPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4991,8 +5032,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208920545}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -28.07956, y: -3.0389936, z: 14.740341}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5000,7 +5041,7 @@ Transform:
   - {fileID: 1003790882}
   - {fileID: 82677653}
   - {fileID: 144498020}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1243461958
 PrefabInstance:
@@ -7355,7 +7396,7 @@ GameObject:
   - component: {fileID: 1934015961}
   m_Layer: 0
   m_Name: RightHandPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7443,8 +7484,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934015960}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22, y: 0, z: -40}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0795593, y: -3.0389936, z: -5.259659}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7454,7 +7495,7 @@ Transform:
   - {fileID: 513261614}
   - {fileID: 1008632107}
   - {fileID: 314842446}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1935568901 stripped
 Transform:
@@ -7711,7 +7752,7 @@ GameObject:
   - component: {fileID: 1997845164}
   m_Layer: 0
   m_Name: LeftHandPlane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7799,8 +7840,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997845163}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -40}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -28.07956, y: -3.0389936, z: -5.259659}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7810,7 +7851,7 @@ Transform:
   - {fileID: 1823078032}
   - {fileID: 546771133}
   - {fileID: 1012590917}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 142635179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2005049574
 PrefabInstance:
@@ -8532,13 +8573,4 @@ SceneRoots:
   - {fileID: 975920031}
   - {fileID: 1031787432}
   - {fileID: 1836639622}
-  - {fileID: 146574480}
-  - {fileID: 881912318}
-  - {fileID: 1208920549}
-  - {fileID: 656852680}
-  - {fileID: 155446799}
-  - {fileID: 238067155}
-  - {fileID: 1997845167}
-  - {fileID: 1934015964}
-  - {fileID: 943633245}
-  - {fileID: 1188210932}
+  - {fileID: 142635179}
