@@ -9,9 +9,27 @@ public enum ButtonType
     Loop,
     Stop,
     Path,
-    Param
+    Param,
+    FingerStandard,
+    FingerWaveform
 }
 
+public enum FingerType
+{
+    Undefined,
+    LeftThumb,
+    LeftIndex,
+    LeftMiddle,
+    LeftRing,
+    LeftLittle,
+    LeftWrist,
+    RightThumb,
+    RightIndex,
+    RightMiddle,
+    RightRing,
+    RightLittle,
+    RightWrist
+}
 
 public class Button : MonoBehaviour
 {
@@ -21,17 +39,20 @@ public class Button : MonoBehaviour
     public UnityEvent OnStopButtonPressed;
     public UnityEvent OnPathButtonPressed;
     public UnityEvent OnParamButtonPressed;
+    public UnityEvent<FingerType> OnFingerStandardButtonPressed; // Placeholder for Finger Standard button
+    public UnityEvent<FingerType> OnFingerWaveformButtonPressed; // Placeholder for Finger Waveform button
 
     public int buttonID = -1;
     public HapticEventType eventType = HapticEventType.Undefined;
     public ButtonType buttonType = ButtonType.Standard;
 
+    public FingerType fingerType = FingerType.Undefined; // For Finger buttons
+
     private bool isPressed = false;
 
-
-    [field: SerializeField]
+    [SerializeField]
     private float pressDuration = 0.5f; // Duration the button stays pressed
-    [field: SerializeField]
+    [SerializeField]
     public float PressDuration
     {
         get { return pressDuration; }
@@ -97,7 +118,10 @@ public class Button : MonoBehaviour
                 OnPathButtonPressed?.Invoke();
             else if (buttonType == ButtonType.Param)
                 OnParamButtonPressed?.Invoke();
-
+            else if (buttonType == ButtonType.FingerStandard)
+                OnFingerStandardButtonPressed?.Invoke(fingerType);
+            else if (buttonType == ButtonType.FingerWaveform)
+                OnFingerWaveformButtonPressed?.Invoke(fingerType);
             isPressed = true;
             pressTimer = pressDuration;
         }

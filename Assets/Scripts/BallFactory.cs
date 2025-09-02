@@ -51,7 +51,6 @@ public class BallFactory : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -69,7 +68,6 @@ public class BallFactory : MonoBehaviour
             DefaultPoolSize,
             MaxPoolSize
         );
-
     }
 
     private GameObject CreateBall()

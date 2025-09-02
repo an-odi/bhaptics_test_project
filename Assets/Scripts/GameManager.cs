@@ -41,5 +41,16 @@ public class GameManager : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-    }   
+    }
+
+    public Button[] GetAllButtons()
+    {
+        GameObject[] arrayOfButton = GameObject.FindGameObjectsWithTag("Button");
+        Button[] buttons = new Button[arrayOfButton.Length];
+        for (int i = 0; i < arrayOfButton.Length; i++)
+        {
+            buttons[i] = arrayOfButton[i].GetComponent<Button>();
+        }
+        return buttons;
+    }
 }
