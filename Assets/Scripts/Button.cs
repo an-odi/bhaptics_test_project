@@ -44,7 +44,7 @@ public class Button : MonoBehaviour
                 // Reset button color
                 GetComponent<Renderer>().material.color = Color.white;
                 // Physical reset
-                this.transform.localScale = new Vector3(this.transform.localScale.x, 1, this.transform.localScale.z);
+                this.transform.localScale = new Vector3(this.transform.localScale.x, 1f, this.transform.localScale.z);
             }
         }
     }

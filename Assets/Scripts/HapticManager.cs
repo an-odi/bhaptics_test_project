@@ -1,22 +1,39 @@
 using UnityEngine;
+using Bhaptics.SDK2;
 
 public class HapticManager : MonoBehaviour
 {
     public static HapticManager instance;
 
-    private float haticDuration = 0.1f; // Duration of haptic feedback
+    private int haticDuration = 100; // Duration of haptic feedback
 
-    public float HaticDuration
+    public int HaticDuration
     {
         get { return haticDuration; }
         set
         {
-            if (value < 0.1f)
-                haticDuration = 0.1f;
-            else if (value > 5.0f)
-                haticDuration = 5.0f;
+            if (value < 100)
+                haticDuration = 100;
+            else if (value > 5000)
+                haticDuration = 5000;
             else
                 haticDuration = value;
+        }
+    }
+
+    private int hapticIntensity = 100; // Intensity of haptic feedback
+
+    public int HapticIntensity
+    {
+        get { return hapticIntensity; }
+        set
+        {
+            if (value < 1)
+                hapticIntensity = 1;
+            else if (value > 100)
+                hapticIntensity = 100;
+            else
+                hapticIntensity = value;
         }
     }
 
@@ -48,6 +65,14 @@ public class HapticManager : MonoBehaviour
     private void HandleButtonPress(int buttonID)
     {
         Debug.Log($"Haptic feedback for button ID: {buttonID}");
-        // TODO: Call haptic function giving buttonID
+        int[] intensities = new int[32]; // Example intensities
+
+        intensities[buttonID] = 100;
+
+        int requestID = BhapticsLibrary.PlayMotors(
+            (int)PositionType.Vest,
+            intensities,
+            haticDuration
+        );
     }
 }

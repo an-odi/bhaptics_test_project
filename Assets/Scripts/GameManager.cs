@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +21,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+
     }
 
     private void Start()
@@ -34,6 +38,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("HapticManager instance assigned in GameManager.");
         else
             Debug.LogError("HapticManager instance is null in GameManager.");
-        
-    }
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }   
 }
