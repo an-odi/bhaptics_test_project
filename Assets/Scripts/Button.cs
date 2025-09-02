@@ -1,14 +1,37 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+
+public enum ButtonType
+{
+    Standard,
+    Event,
+    Loop,
+    Stop,
+    Path,
+    Param
+}
+
+
 public class Button : MonoBehaviour
 {
     public UnityEvent<int> OnButtonPressed;
+    public UnityEvent<HapticEventType> OnEventButtonPressd;
+    public UnityEvent OnLoopButtonPressed;
+    public UnityEvent OnStopButtonPressed;
+    public UnityEvent OnPathButtonPressed;
+    public UnityEvent OnParamButtonPressed;
+
     public int buttonID = -1;
+    public HapticEventType eventType = HapticEventType.Undefined;
+    public ButtonType buttonType = ButtonType.Standard;
 
     private bool isPressed = false;
 
+
+    [field: SerializeField]
     private float pressDuration = 0.5f; // Duration the button stays pressed
+    [field: SerializeField]
     public float PressDuration
     {
         get { return pressDuration; }
@@ -27,9 +50,14 @@ public class Button : MonoBehaviour
     void Start()
     {
         GetComponent<Renderer>().material.color = Color.white;
-        if (buttonID == -1)
+        if (buttonID == -1 && buttonType == ButtonType.Standard)
         {
             Debug.LogWarning("Button ID not set! Please set a unique ID for this button.");
+        }
+
+        if (buttonType == ButtonType.Event && eventType == HapticEventType.Undefined)
+        {
+            Debug.LogWarning("Event Type not set! Please set a valid event type for this button.");
         }
     }
 
@@ -57,7 +85,19 @@ public class Button : MonoBehaviour
             GetComponent<Renderer>().material.color = Color.red;
             // Physical press effect
             this.transform.localScale = new Vector3(this.transform.localScale.x, 0.5f, this.transform.localScale.z);
-            OnButtonPressed?.Invoke(buttonID); // Invoke event with parameter 1
+            if (buttonType == ButtonType.Standard)
+                OnButtonPressed?.Invoke(buttonID);
+            else if (buttonType == ButtonType.Event)
+                OnEventButtonPressd?.Invoke(eventType);
+            else if (buttonType == ButtonType.Loop)
+                OnLoopButtonPressed?.Invoke();
+            else if (buttonType == ButtonType.Stop)
+                OnStopButtonPressed?.Invoke();
+            else if (buttonType == ButtonType.Path)
+                OnPathButtonPressed?.Invoke();
+            else if (buttonType == ButtonType.Param)
+                OnParamButtonPressed?.Invoke();
+
             isPressed = true;
             pressTimer = pressDuration;
         }

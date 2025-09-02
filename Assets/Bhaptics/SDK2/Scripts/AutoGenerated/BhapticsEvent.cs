@@ -17,6 +17,14 @@ namespace Bhaptics.SDK2
     public class BhapticsEvent
     {
         
-        public const string TEST = "test";
+        public const string XPATTERN = "xpattern";
+        
+        public const string OPATTERN = "opattern";
+        
+        public const string ZIGZAGPATTERN = "zigzagpattern";
+        
+        public const string SPATTERN = "spattern";
+        
+        public const string LOOPPATTERN = "looppattern";
     }
 }

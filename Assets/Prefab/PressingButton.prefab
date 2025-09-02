@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1305890155461929008}
   - component: {fileID: 8001271376782696762}
   - component: {fileID: 6734453329365064553}
-  - component: {fileID: 7726995485096250072}
+  - component: {fileID: 242111268763884094}
   m_Layer: 0
   m_Name: PressingButton
   m_TagString: Button
@@ -109,7 +109,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7726995485096250072
+--- !u!114 &242111268763884094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
